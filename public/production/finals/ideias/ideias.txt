@@ -1,0 +1,17 @@
+Funcionalidades do WorkTab:
+
+. API para aplicativos interagirem com o sistema;
+
+API's do WorkTab:
+
+. A migração dos dados, será feita através da tecnologia de web services;
+. API de notificações;
+. API de gerência de arquivos;
+. API para acesso dos dados pessoais do usuário;
+. API para acesso da lista de contatos do usuário;
+. API para crud de relatórios referentes à aplicação;
+
+
+Aplicativos para o WorkTab
+
+. Ferramenta para gerencia de projetos com task list, geração de relatórios e gráficos do desempenho do projeto;
