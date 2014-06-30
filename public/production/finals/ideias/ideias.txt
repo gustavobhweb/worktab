@@ -14,4 +14,8 @@ API's do WorkTab:
 
 Aplicativos para o WorkTab
 
-. Ferramenta para gerencia de projetos com task list, geração de relatórios e gráficos do desempenho do projeto;
+. Ferramenta para gerencia de projetos com task list, geração de relatórios e gráficos (inclusive o burndown) do 
+desempenho do projeto;
+. Ferramenta avançada para gerenciamento de contatos, com possibilidade de mandar e-mails, crair grupos e se a o 
+usuário é um usuário WorkTab é possível usar as funcionalidades do sistema para interação com o usuário;
+. Ferramenta para gerenciamento de agenda pessoal;

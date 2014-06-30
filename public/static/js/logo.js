@@ -196,7 +196,7 @@ function animationLoading()
                 }, function(){
                     $logo.stop();
                 });
-            }, ($logo.time * 20));
+            }, ($logo.time * 11));
         }
     };
     
