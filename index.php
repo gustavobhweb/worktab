@@ -21,7 +21,7 @@
 		</ul>
 	</div><!-- .header -->
 
-	<div class='page home'>
+	<div class='page home' data-type='background' data-speed='26'>
 		<div class='page grid'>
 			<div class='text-info'>
 				<h1 class='h1-left'>Soluções <b>concretas</b> e <b>inteligentes</b></h1>

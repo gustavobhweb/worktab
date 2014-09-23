@@ -1,3 +1,39 @@
+/**
+* Animations
+*/
+
+@-webkit-keyframes h1left{
+	0% {
+		left: 0;
+	},
+	100% {
+		left: 20px;
+	}
+}
+
+@-webkit-keyframes h1right{
+	0% {
+		right: 0;
+	},
+	100% {
+		right: 20px;
+	}
+}
+
+@-webkit-keyframes btnmore{
+	0% {
+		top:130px;
+		opacity: 0;
+	},
+	100% {
+		top:150px;
+		opacity: 1;
+	}
+}
+
+/**
+* Styles
+*/
 *{margin:0;padding:0}
 html,body{width:100%;height:100%;}
 
@@ -8,6 +44,7 @@ html,body{width:100%;height:100%;}
 	background:#eeeeee;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 	z-index: 1;
+	-webkit-animation: teste 5s;
 }
 
 .header img{
@@ -34,11 +71,6 @@ html,body{width:100%;height:100%;}
 	padding: 0 2px 3px 2px
 }
 
-.header ul li a:hover{
-	color: #E6A759;
-	border-bottom: 1px solid #E6A759;
-}
-
 .page{
 	width:100%;
 	height:100%;
@@ -48,7 +80,7 @@ html,body{width:100%;height:100%;}
 .page.home{
 	background-image: url(../img/cover.jpg);
 	background-attachment: fixed;
-	background-position: 50% 50%;
+	background-position: 50% 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -76,11 +108,13 @@ html,body{width:100%;height:100%;}
 .page.grid > .text-info > .h1-left{
 	left:20px;
 	top:0;
+	-webkit-animation: h1left 1.2s linear;
 }
 
 .page.grid > .text-info > .h1-right{
 	right: 20px;
 	top: 50px;
+	-webkit-animation: h1right 1.2s linear;
 }
 
 .page.grid > .text-info > .btn-more{
@@ -98,7 +132,9 @@ html,body{width:100%;height:100%;}
 	font-weight: 300;
 	color: #FFFFFF;
 	cursor: pointer;
-	transition: 0.25s
+	outline:none;
+	transition: 0.25s;
+	-webkit-animation: btnmore 1.2s linear;
 }
 
 .btn-wt:hover{

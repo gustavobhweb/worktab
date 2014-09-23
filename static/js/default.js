@@ -2,22 +2,19 @@ function Page()
 {
 	var currentPage;
 
-	this.goto = function(obj)
+	this.goto = function(page, action)
 	{
 		$('.header ul li a').css({
 			border: 'none',
 			color: '#333333'
 		});
-		obj.css({
-			borderBottom: '1px solid #E6A759',
-			color: '#E6A759'
-		});
-		this.currentPage = obj.attr('data-page');
+		this.currentPage = page;
 		var page = $('.' + this.currentPage);
 		var scrollPage = page.offset().top;
 		$('html,body').animate({
 			scrollTop: scrollPage
-		});
+		}, 2000);
+		if (action != null && typeof(action) == 'function') action();
 	}
 
 	this.onScroll = function(bottom, top)
@@ -37,9 +34,7 @@ function Page()
 
 $(function(){
 	var page = new Page();
-
 	page.onScroll(function(){
-		console.log('desce');
 		if ($(window).scrollTop() > 500) {
 			$('.header').stop().animate({
 				height: 70
@@ -65,7 +60,37 @@ $(function(){
 		}
 	});
 
+	$('div[data-type="background"]').each(function(){
+    	var $scroll = $(this);
+        $(window).scroll(function() {
+        	var yPos = -($(window).scrollTop() / $scroll.data('speed'));
+        	console.log($scroll.data('speed'));
+            var coords = '50% '+ yPos + 'px';
+            $scroll.css({ backgroundPosition: coords });
+        });
+    });
+
 	$('.link').click(function(){
-		page.goto($(this));
+		var _this = $(this);
+		page.goto($(this).attr('data-page'), function(){
+			_this.css({
+				borderBottom: '1px solid #E6A759',
+				color: '#E6A759'
+			});
+		});
+	});
+
+	$('.header ul li a').hover(function(){
+		$(this).css({
+			color: '#E6A759',
+			borderBottom: '1px solid #E6A759'
+		});
+	}, function(){
+		if (page.currentPage != $(this).attr('data-page')) {
+			$(this).css({
+				color: '#333333',
+				borderBottom: 'none'
+			});
+		}
 	});
 });
