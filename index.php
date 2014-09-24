@@ -12,6 +12,7 @@
 
 	<div class='header'>
 		<img src='static/img/logo.png' />
+		<button class='alternative-menu'>Menu</button>
 		<ul>
 			<li><a class='link' data-page='home' href='javascript:void(0)'>Início</a></li>
 			<li><a class='link' data-page='services' href='javascript:void(0)'>Serviços</a></li>
@@ -33,7 +34,7 @@
 
 	<div class='page services'>
 		<h1>Serviços</h1>
-		<p>Nós desenvolvemos métodos que visam ampliar a visibilidade da sua empresa e otimizar o controle das 
+		<p>Nós desenvolvemos métodos que visam ampliar a visibilidade da sua empresa e otimizar o controle das
 		suas atividades profissionais com sites, sistemas e aplicativos em qualquer plataforma.</p>
 		<div class='services-list'>
 			<div class='service'>

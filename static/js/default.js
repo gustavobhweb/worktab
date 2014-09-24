@@ -131,4 +131,8 @@ $(function(){
 			});
 		}
 	});
+
+	$('.btn-more').on('click', function(){
+		page.goto('services');
+	});
 });

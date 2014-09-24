@@ -41,6 +41,18 @@
 }
 
 /**
+* Responsive
+*/
+@media screen and (max-width:720px){
+	.header ul{
+		display:none;
+	}
+	.alternative-menu{
+		display: block !important;
+	}
+}
+
+/**
 * Styles
 */
 ::-webkit-scrollbar{width:0;}
@@ -72,6 +84,12 @@ h1,h2,h3,h4,h5,h6,p,a,b{
 .header ul{
 	float:right;
 	list-style: none;
+	margin: 40px 10px 0 0;
+}
+
+.alternative-menu{
+	float:right;
+	display: none;
 	margin: 40px 10px 0 0;
 }
 
