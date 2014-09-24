@@ -1,28 +1,65 @@
-function Page()
+function Page(pages, currentPage)
 {
 	var currentPage;
+	var pages;
+	var ativ;
 
-	this.goto = function(page, action)
+	this.construct = function(pages, currentPage)
 	{
+		this.pages = pages;
+		this.currentPage = currentPage;
+		this.ativ = true;
+		$('.header ul li a[data-page="'+currentPage+'"]').css({
+			borderBottom: '1px solid #E6A759',
+			color: '#E6A759'
+		});
+	}
+
+	this.goto = function(page, action, start)
+	{
+		this.ativ = false;
 		$('.header ul li a').css({
 			border: 'none',
 			color: '#333333'
 		});
-		console.log(this.pages);
+		$('.header ul li a[data-page="'+page+'"]').css({
+			borderBottom: '1px solid #E6A759',
+			color: '#E6A759'
+		});
 		this.currentPage = page;
+		var $thisAtiv = this;
 		var page = $('.' + this.currentPage);
 		var scrollPage = page.offset().top;
 		$('html,body').animate({
 			scrollTop: scrollPage
-		}, 2000);
+		}, 2000, function(){
+			setTimeout(function(){
+				$thisAtiv.ativ = true;
+			}, 200);
+		});
 		if (action != null && typeof(action) == 'function') action();
+	}
+
+	this.nav = function()
+	{
+		var nav = {};
+		for (i in this.pages) {
+			i = parseInt(i);
+			if (this.currentPage == this.pages[i]) {
+				nav.prevPage = typeof(this.pages[i - 1]) != 'undefined' ? this.pages[i - 1] : false;
+				nav.nextPage = typeof(this.pages[i + 1]) != 'undefined' ? this.pages[i + 1] : false;
+			}
+		}
+		return nav;
 	}
 
 	this.onScroll = function(bottom, top)
 	{
 		var scrollPoint = 0;
 
-		$(window).on('scroll', function(){
+		$(window).on('scroll', function(e){
+			e.preventDefault();
+			e.stopPropagation();
 			if ($(window).scrollTop() >= scrollPoint) {
 				bottom();
 			} else {
@@ -31,11 +68,13 @@ function Page()
 			scrollPoint = $(window).scrollTop();
 		});
 	}
+
+	this.construct(pages, currentPage);
 }
 
 $(function(){
 
-	var page = new Page();
+	var page = new Page(['home', 'services', 'team', 'metodology', 'contact'], 'home');
 
 	page.onScroll(function(){
 		if ($(window).scrollTop() > 300) {
@@ -49,6 +88,7 @@ $(function(){
 				marginTop: 25
 			});
 		}
+		if (page.ativ) page.goto(page.nav().nextPage);
 	}, function(){
 		if ($(window).scrollTop() < 100) {
 			$('.header').stop().animate({
@@ -61,6 +101,7 @@ $(function(){
 				marginTop: 40
 			});
 		}
+		if (page.ativ) page.goto(page.nav().prevPage);
 	});
 
 	$('div[data-type="background"]').each(function(){
@@ -74,12 +115,7 @@ $(function(){
 
 	$('.link').click(function(){
 		var _this = $(this);
-		page.goto($(this).attr('data-page'), function(){
-			_this.css({
-				borderBottom: '1px solid #E6A759',
-				color: '#E6A759'
-			});
-		});
+		page.goto($(this).attr('data-page'));
 	});
 
 	$('.header ul li a').hover(function(){
