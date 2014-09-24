@@ -21,7 +21,7 @@
 		</ul>
 	</div><!-- .header -->
 
-	<div class='page home' data-type='background' data-speed='26'>
+	<div class='page home' data-type='background' data-speed='2'>
 		<div class='page grid'>
 			<div class='text-info'>
 				<h1 class='h1-left'>Soluções <b>concretas</b> e <b>inteligentes</b></h1>
@@ -32,6 +32,27 @@
 	</div><!-- .home -->
 
 	<div class='page services'>
+		<h1>Serviços</h1>
+		<p>Nós desenvolvemos métodos que visam ampliar a visibilidade da sua empresa e otimizar o controle das 
+		suas atividades profissionais com sites, sistemas e aplicativos em qualquer plataforma.</p>
+		<div class='services-list'>
+			<div class='service'>
+				<img src='static/img/services/web-marketing.png' />
+				<h2 style='left:20px'>Web Marketing</h2>
+			</div><!-- .web-marketing -->
+			<div class='service'>
+				<img src='static/img/services/sistemas.png' />
+				<h2 style='left:43px'>Sistemas</h2>
+			</div><!-- .web-marketing -->
+			<div class='service'>
+				<img src='static/img/services/aplicativos.png' style='margin:35px 0 0 0' />
+				<h2 style='left:35px'>Aplicativos</h2>
+			</div><!-- .web-marketing -->
+			<div class='service' style='margin:0'>
+				<img src='static/img/services/acompanhamento.png' style='margin:40px 0 0 0' />
+				<h2 style='left:5px'>Acompanhamento</h2>
+			</div><!-- .web-marketing -->
+		</div><!-- .services-list -->
 	</div><!-- .services -->
 
 	<div class='page team'>

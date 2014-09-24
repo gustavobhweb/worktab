@@ -8,6 +8,7 @@ function Page()
 			border: 'none',
 			color: '#333333'
 		});
+		console.log(this.pages);
 		this.currentPage = page;
 		var page = $('.' + this.currentPage);
 		var scrollPage = page.offset().top;
@@ -33,9 +34,11 @@ function Page()
 }
 
 $(function(){
+
 	var page = new Page();
+
 	page.onScroll(function(){
-		if ($(window).scrollTop() > 500) {
+		if ($(window).scrollTop() > 300) {
 			$('.header').stop().animate({
 				height: 70
 			});
@@ -64,7 +67,6 @@ $(function(){
     	var $scroll = $(this);
         $(window).scroll(function() {
         	var yPos = -($(window).scrollTop() / $scroll.data('speed'));
-        	console.log($scroll.data('speed'));
             var coords = '50% '+ yPos + 'px';
             $scroll.css({ backgroundPosition: coords });
         });
