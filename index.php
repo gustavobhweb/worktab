@@ -6,6 +6,7 @@
 	<title>WorkTab</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' type='text/css' href='static/css/default.css' />
+	<link rel="shortcut icon" type="image/png" href="static/img/favicon.png"/>
 	<script type='text/javascript' src='static/js/jquery-1.11.1.min.js'></script>
 	<script type='text/javascript' src='static/js/default.js'></script>
 </head>
