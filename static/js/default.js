@@ -88,7 +88,7 @@ $(function(){
 				marginTop: 25
 			});
 		}
-		if (page.ativ) page.goto(page.nav().nextPage);
+		// if (page.ativ) page.goto(page.nav().nextPage);
 	}, function(){
 		if ($(window).scrollTop() < 100) {
 			$('.header').stop().animate({
@@ -101,7 +101,7 @@ $(function(){
 				marginTop: 40
 			});
 		}
-		if (page.ativ) page.goto(page.nav().prevPage);
+		// if (page.ativ) page.goto(page.nav().prevPage);
 	});
 
 	$('div[data-type="background"]').each(function(){

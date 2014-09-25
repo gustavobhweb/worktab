@@ -43,7 +43,16 @@
 /**
 * Responsive
 */
-@media screen and (max-width:720px){
+@media screen and (max-width:740px){
+	.header ul{
+		display:none;
+	}
+	.alternative-menu{
+		display: block !important;
+	}
+}
+
+@media screen and (max-width:700px){
 	.header ul{
 		display:none;
 	}
@@ -55,7 +64,6 @@
 /**
 * Styles
 */
-::-webkit-scrollbar{width:0;}
 *{margin:0;padding:0}
 html,body{
 	width:100%;
@@ -99,7 +107,7 @@ h1,h2,h3,h4,h5,h6,p,a,b{
 }
 
 .header ul li a{
-	font: 15px 'Roboto', sans-serif;
+	font: 91% 'Roboto', sans-serif;
 	font-weight: 300;
 	text-decoration: none;
 	color: #333333;
