@@ -8,6 +8,7 @@
 	<link rel='stylesheet' type='text/css' href='static/css/default.css' />
 	<link rel="shortcut icon" type="image/png" href="static/img/favicon.png"/>
 	<script type='text/javascript' src='static/js/jquery-1.11.1.min.js'></script>
+	<script type='text/javascript' src='static/js/nicescroll.js'></script>
 	<script type='text/javascript' src='static/js/default.js'></script>
 </head>
 <body>
