@@ -75,6 +75,17 @@ function Page(pages, currentPage)
 $(function(){
 
 	var page = new Page(['home', 'services', 'team', 'metodology', 'contact'], 'home');
+	
+	$('html').niceScroll({
+        cursorcolor: "rgb(230, 167, 89)",
+        cursoropacitymin: 0,
+        cursoropacitymax: 1,
+        cursorwidth: 5,
+        cursorborder: "1px solid #fff",
+        cursorborderradius: "4px",
+        zindex: 2,
+        scrollspeed: 60
+    });
 
 	page.onScroll(function(){
 		if ($(window).scrollTop() > 300) {
