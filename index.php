@@ -3,6 +3,7 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='initital-scale=1.0, width=device_width'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>WorkTab</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' type='text/css' href='static/css/default.css' />
@@ -14,7 +15,7 @@
 <body>
 
 	<div class='header'>
-		<img src='static/img/logo.png' />
+		<img src='static/img/worktab.png' alt='WorkTab' title='WorkTab' />
 		<button class='alternative-menu'>Menu</button>
 		<ul>
 			<li><a class='link' data-page='home' href='javascript:void(0)'>Início</a></li>
@@ -25,7 +26,7 @@
 		</ul>
 	</div><!-- .header -->
 
-	<div class='page home' data-type='background' data-speed='2'>
+	<div class='page home' data-page='home' data-type='background' data-speed='2'>
 		<div class='page grid'>
 			<div class='text-info'>
 				<h1 class='h1-left'>Soluções <b>concretas</b> e <b>inteligentes</b></h1>
@@ -35,38 +36,40 @@
 		</div><!-- .grid -->
 	</div><!-- .home -->
 
-	<div class='page services'>
+	<div class='page services' data-page='services'>
 		<h1>Serviços</h1>
 		<p>Nós desenvolvemos métodos que visam ampliar a visibilidade da sua empresa e otimizar o controle das
 		suas atividades profissionais com sites, sistemas e aplicativos em qualquer plataforma.</p>
 		<div class='services-list'>
 			<div class='service'>
-				<img src='static/img/services/web-marketing.png' />
+				<img src='static/img/services/web-marketing.png' alt='Web Marketing' title='Web Marketing' />
 				<h2 style='left:20px'>Web Marketing</h2>
 			</div><!-- .web-marketing -->
 			<div class='service'>
-				<img src='static/img/services/sistemas.png' />
+				<img src='static/img/services/sistemas.png' alt='Sistemas' title='Serviços' />
 				<h2 style='left:43px'>Sistemas</h2>
 			</div><!-- .web-marketing -->
 			<div class='service'>
-				<img src='static/img/services/aplicativos.png' style='margin:35px 0 0 0' />
+				<img src='static/img/services/aplicativos.png' alt='Aplicativos' style='margin:35px 0 0 0' title='Aplicativos' />
 				<h2 style='left:35px'>Aplicativos</h2>
 			</div><!-- .web-marketing -->
 			<div class='service' style='margin:0'>
-				<img src='static/img/services/acompanhamento.png' style='margin:40px 0 0 0' />
+				<img src='static/img/services/acompanhamento.png' alt='Acompanhamento' style='margin:40px 0 0 0' title='Acompanhamento' />
 				<h2 style='left:5px'>Acompanhamento</h2>
 			</div><!-- .web-marketing -->
 		</div><!-- .services-list -->
 	</div><!-- .services -->
 
-	<div class='page team'>
+	<div class='page team' data-page='team'>
 	</div><!-- .services -->
 
-	<div class='page metodology'>
+	<div class='page metodology' data-page='metodology'>
 	</div><!-- .services -->
 
-	<div class='page contact'>
+	<div class='page contact' data-page='contact'>
 	</div><!-- .services -->
-
+	
+	<button class='nav-button'></button>
+	
 </body>
 </html>

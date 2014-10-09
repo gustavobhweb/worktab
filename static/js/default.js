@@ -18,14 +18,6 @@ function Page(pages, currentPage)
 	this.goto = function(page, action, start)
 	{
 		this.ativ = false;
-		$('.header ul li a').css({
-			border: 'none',
-			color: '#333333'
-		});
-		$('.header ul li a[data-page="'+page+'"]').css({
-			borderBottom: '1px solid #E6A759',
-			color: '#E6A759'
-		});
 		this.currentPage = page;
 		var $thisAtiv = this;
 		var page = $('.' + this.currentPage);
@@ -53,7 +45,7 @@ function Page(pages, currentPage)
 		return nav;
 	}
 
-	this.onScroll = function(bottom, top)
+	this.onScroll = function(bottom, top, any)
 	{
 		var scrollPoint = 0;
 
@@ -66,6 +58,7 @@ function Page(pages, currentPage)
 				top();
 			}
 			scrollPoint = $(window).scrollTop();
+			any(scrollPoint);
 		});
 	}
 
@@ -99,7 +92,6 @@ $(function(){
 				marginTop: 25
 			});
 		}
-		// if (page.ativ) page.goto(page.nav().nextPage);
 	}, function(){
 		if ($(window).scrollTop() < 100) {
 			$('.header').stop().animate({
@@ -112,7 +104,20 @@ $(function(){
 				marginTop: 40
 			});
 		}
-		// if (page.ativ) page.goto(page.nav().prevPage);
+	}, function(scrollPoint){
+		$('.page').not('.grid').each(function(){
+			var $page = $(this).data('page');
+			if (scrollPoint + 100 > $(this).offset().top) {
+				$('.header ul li a').css({
+					border: 'none',
+					color: '#333333'
+				});
+				$('.header ul li a[data-page="'+$page+'"]').css({
+					borderBottom: '1px solid #E6A759',
+					color: '#E6A759'
+				});
+			}
+		});
 	});
 
 	$('div[data-type="background"]').each(function(){

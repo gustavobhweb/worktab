@@ -31,12 +31,15 @@
 	}
 }
 
-@-webkit-keyframes test{
+@-webkit-keyframes btnnav{
 	0% {
-		margin-top: 90px
+		box-shadow: 0 0 0px #FFFFFF;
+	},
+	50% {
+		box-shadow: 0 0 20px #FFFFFF;
 	},
 	100% {
-		margin-top: 60px
+		box-shadow: 0 0 0px #FFFFFF;
 	}
 }
 
@@ -81,7 +84,6 @@ h1,h2,h3,h4,h5,h6,p,a,b{
 	background: rgba(238, 238, 238, 1);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 	z-index: 1;
-	-webkit-animation: teste 5s;
 	opacity: 0.95;
 }
 
@@ -241,4 +243,16 @@ h1,h2,h3,h4,h5,h6,p,a,b{
 	background: #ffffff;
 	color:#333333;
 	font-weight: 300
+}
+
+.nav-button{
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	right:30px;
+	bottom:30px;
+	background:transparent;
+	border:1px solid #FFFFFF;
+	-webkit-animation: btnnav 1.2s infinite;
+	box-shadow: 0 0 20px #FFFFFF;
 }
