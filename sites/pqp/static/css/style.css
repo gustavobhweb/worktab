@@ -1,0 +1,101 @@
+/**
+* Animations
+*/
+@-webkit-keyframes h11{
+	0%{
+		margin-left: 180px
+	},
+	100%{
+		margin-left: 200px
+	}
+}
+@-webkit-keyframes h12{
+	0%{
+		margin-right: 130px
+	},
+	100%{
+		margin-right: 100px
+	}
+}
+
+*{margin:0;padding:0}
+html,body{
+	height:100%;
+}
+h1,h2,h3,h4,h5,h6,a,p,b{
+	font-family: Gabriela;
+}
+.main{
+	width:1000px;
+	margin: 0 auto;
+}
+.menu{
+	width: 100%;
+	height: 100px;
+	background: #9DCEFF;
+	position:fixed;
+}
+.menu iframe{
+	float:left;
+	margin: 40px 0 0 40px
+}
+.menu img{
+	float: left;
+	margin: 15px 0 0 0;
+}
+.menu ul{
+	float: right;
+	list-style: none;
+	margin: 40px 0 0 0
+}
+.menu ul li{
+	display: inline
+}
+.menu ul li a{
+	padding: 5px;
+	background: #0085B2;
+	color: #ffffff;
+	text-decoration: none;
+	margin:0 10px 0 0;
+	border-radius: 4px
+}
+.menu ul li a:hover{
+	opacity: 0.6
+}
+.page{
+	width:100%;
+	min-height:100%;
+}
+.h11{float:left;margin:30% 0 0 150px;-webkit-animation: h11 2s linear}
+.h12{float:right;margin:20px 100px 0 0;-webkit-animation: h12 2s linear}
+.page[data-page="1"]{
+	background: url(../img/edu.png) no-repeat;
+	background-size: cover;
+	background-position: 50% 10%;
+	background-attachment: fixed;
+}
+.page[data-page="1"] h1{
+	color: #FFFFFF;
+	font-size: 32px
+}
+.page[data-page="2"]{
+}
+.page[data-page="3"]{
+}
+.footer{
+	background: #9DCEFF;
+	width: 100%;
+	height: 120px;
+}
+.footer img{
+	float:left;
+	margin:35px 0 0 0
+}
+.footer p{
+	font: 15px Arial;
+	margin:5px 0 0 0
+}
+
+
+
+
