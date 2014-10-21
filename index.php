@@ -64,15 +64,18 @@
 	</div><!-- .services -->
 
 	<div class='page team' data-page='team'>
+		<br><br><br><br><br><br>NOSSA EQUIPE
 	</div><!-- .services -->
 
 	<div class='page metodology' data-page='metodology'>
+		<br><br><br><br><br><br>METODOLOGIA
 	</div><!-- .services -->
 
 	<div class='page contact' data-page='contact'>
+		<br><br><br><br><br><br>CONTATO
 	</div><!-- .services -->
 	
-	<button class='nav-button'></button>
+	<button class='nav-button'><i class='glyphicon glyphicon-chevron-down'></i></button>
 	
 </body>
 </html>

@@ -105,6 +105,16 @@ $(function(){
 			});
 		}
 	}, function(scrollPoint){
+		if (page.currentPage == 'home') {
+			$('.nav-button').attr('data-style', 'first');
+		} else {
+			$('.nav-button').attr('data-style', 'other');
+		}
+		
+		if (!page.nav().nextPage) {
+			$('.nav-button').html('<i class="glyphicon glyphicon-chevron-up"></i>');
+		}
+		
 		$('.page').not('.grid').each(function(){
 			var $page = $(this).data('page');
 			if (scrollPoint + 100 > $(this).offset().top) {
@@ -150,5 +160,14 @@ $(function(){
 
 	$('.btn-more').on('click', function(){
 		page.goto('services');
+	});
+	
+	$('.nav-button').on('click', function(){
+		if (!page.nav().nextPage) {
+			page.goto('home');
+			$('.nav-button').html('<i class="glyphicon glyphicon-chevron-down"></i>');
+		} else {
+			page.goto(page.nav().nextPage);
+		}
 	});
 });
