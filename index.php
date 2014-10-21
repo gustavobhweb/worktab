@@ -4,6 +4,9 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='initital-scale=1.0, width=device_width'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="O grupo WorkTab desenvolvemos métodos que visam ampliar a visibilidade da sua empresa e otimizar o controle das
+		suas atividades profissionais com sites, sistemas e aplicativos em qualquer plataforma.">
+	<meta name="keywords" content="soluções web, desenvolvimento de sites, web marketing"/>
 	<title>WorkTab</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' type='text/css' href='static/css/default.css' />
