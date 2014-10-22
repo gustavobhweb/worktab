@@ -4,6 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='initital-scale=1.0, width=device_width'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="google-site-verification" content="a34Jf3lFDG_0BPG9Llv4HEpwYg6VHyYDHZ7NLDFtUSI" />
 	<title>WorkTab</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' type='text/css' href='static/css/default.css' />
