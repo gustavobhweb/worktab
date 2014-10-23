@@ -1,79 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='initital-scale=1.0, width=device_width'>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="google-site-verification" content="a34Jf3lFDG_0BPG9Llv4HEpwYg6VHyYDHZ7NLDFtUSI" />
-	<title>WorkTab</title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' type='text/css' href='static/css/default.css' />
-	<link rel="shortcut icon" type="image/png" href="static/img/favicon.png"/>
+	<meta charset="utf-8">
+	<title>WorkTab - Em construção...</title>
+	<style type="text/css">
+	#txt_email{height:35px;padding:0;outline:none;font-family:Roboto;width:300px;border:1px solid #cccccc;float:left;padding:0 6px;border-radius:3px 0 0 3px;}
+	#txt_email:focus{border:1px solid #E6A759}
+	#btn_enviar{height:37px;background:#E6A759;padding:0 15px;color:white;border:none;float:left;outline:none;border-radius:0 3px 3px 0;}
+	#btn_enviar:hover{cursor:pointer;box-shadow:inset 0px 2px 20px 0px rgba(0, 0, 0, 0.1)}
+	#btn_enviar:active{box-shadow:inset 0px 8px 20px 0px rgba(0, 0, 0, 0.1)}
+	</style>
 	<script type='text/javascript' src='static/js/jquery-1.11.1.min.js'></script>
-	<script type='text/javascript' src='static/js/nicescroll.js'></script>
-	<script type='text/javascript' src='static/js/default.js'></script>
+		<script type='text/javascript'>
+		$(function(){
+			$('#txt_email').focus();
+			$('#btn_enviar').on('click', function(){
+				var email = $('#txt_email').val();
+				$.ajax({
+					url: 'ajax/emails.php',
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						'txt_email': email
+					},
+					success: function(response){
+						if (response.status) {
+							alert(response.message);
+							
+						} else {
+							$('#txt_email').focus();
+							$('#txt_email').val('');
+							$('#txt_email').attr('placeholder', response.message);
+						}
+					},
+					error: function(){
+						alert('Problemas na conexão! Atualize a página e tente novamente.');
+					}
+				});
+			});
+			$('#txt_email').on('keyup', function(event){
+				if (event.keyCode == 13) {
+					$('#btn_enviar').click();
+				}
+			});
+		});
+	</script>
 </head>
 <body>
-
-	<div class='header'>
-		<img src='static/img/worktab.png' alt='WorkTab' title='WorkTab' />
-		<button class='alternative-menu'>Menu</button>
-		<ul>
-			<li><a class='link' data-page='home' href='javascript:void(0)'>Início</a></li>
-			<li><a class='link' data-page='services' href='javascript:void(0)'>Serviços</a></li>
-			<li><a class='link' data-page='team' href='javascript:void(0)'>Nossa equipe</a></li>
-			<li><a class='link' data-page='metodology' href='javascript:void(0)'>Metodologia</a></li>
-			<li><a class='link' data-page='contact' href='javascript:void(0)'>Contato</a></li>
-		</ul>
-	</div><!-- .header -->
-
-	<div class='page home' data-page='home' data-type='background' data-speed='2'>
-		<div class='page grid'>
-			<div class='text-info'>
-				<h1 class='h1-left'>Soluções <b>concretas</b> e <b>inteligentes</b></h1>
-				<h1 class='h1-right'>por um investimento <b>inovador</b> e <b>lucrativo</b></h1>
-				<button class='btn-wt btn-more'>saiba mais</button>
-			</div><!-- .text-info -->
-		</div><!-- .grid -->
-	</div><!-- .home -->
-
-	<div class='page services' data-page='services'>
-		<h1>Serviços</h1>
-		<p>Nós desenvolvemos métodos que visam ampliar a visibilidade da sua empresa e otimizar o controle das
-		suas atividades profissionais com sites, sistemas e aplicativos em qualquer plataforma.</p>
-		<div class='services-list'>
-			<div class='service'>
-				<img src='static/img/services/web-marketing.png' alt='Web Marketing' title='Web Marketing' />
-				<h2 style='left:20px'>Web Marketing</h2>
-			</div><!-- .web-marketing -->
-			<div class='service'>
-				<img src='static/img/services/sistemas.png' alt='Sistemas' title='Serviços' />
-				<h2 style='left:43px'>Sistemas</h2>
-			</div><!-- .web-marketing -->
-			<div class='service'>
-				<img src='static/img/services/aplicativos.png' alt='Aplicativos' style='margin:35px 0 0 0' title='Aplicativos' />
-				<h2 style='left:35px'>Aplicativos</h2>
-			</div><!-- .web-marketing -->
-			<div class='service' style='margin:0'>
-				<img src='static/img/services/acompanhamento.png' alt='Acompanhamento' style='margin:40px 0 0 0' title='Acompanhamento' />
-				<h2 style='left:5px'>Acompanhamento</h2>
-			</div><!-- .web-marketing -->
-		</div><!-- .services-list -->
-	</div><!-- .services -->
-
-	<div class='page team' data-page='team'>
-		<br><br><br><br><br><br>NOSSA EQUIPE
-	</div><!-- .services -->
-
-	<div class='page metodology' data-page='metodology'>
-		<br><br><br><br><br><br>METODOLOGIA
-	</div><!-- .services -->
-
-	<div class='page contact' data-page='contact'>
-		<br><br><br><br><br><br>CONTATO
-	</div><!-- .services -->
 	
-	<button class='nav-button'><i class='glyphicon glyphicon-chevron-down'></i></button>
+	<div style='text-align:center;margin:120px 0 0 0'>
+		<img src='static/img/logo.png' />
+		<h3 style="text-align:center;font:20px Roboto;font-weight:300">Desculpe-nos pelo incoveniente, mas nosso site ainda está em construção</h3>
+		<h3 style="text-align:center;font:20px Roboto;font-weight:300">Deixe seu e-mail abaixo, para receber novidades:</h3>
+		<div style="width:400px;margin:0 auto">
+			<input type="text" name="txt_email" id="txt_email" placeholder="email@dominio.com" />
+			<button type="button" id="btn_enviar">Enviar</button>
+		</form>
+	</div>
 	
 </body>
 </html>
