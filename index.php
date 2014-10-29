@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>WorkTab - Em construção...</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 	#txt_email{height:35px;padding:0;outline:none;font-family:Roboto;width:300px;border:1px solid #cccccc;float:left;padding:0 6px;border-radius:3px 0 0 3px;}
 	#txt_email:focus{border:1px solid #E6A759}
