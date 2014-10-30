@@ -149,7 +149,7 @@ h1,h2,h3,h4,h5,h6,p,a,b{
 	font-weight: lighter;
 	color: white;
 	position:absolute;
-	text-shadow: 0 0 5px #000000;
+	text-shadow: 0 0 2px #FFFFFF;
 }
 
 .page.grid > .text-info {
